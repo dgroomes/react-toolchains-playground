@@ -1,4 +1,4 @@
-# babel-standalone
+# zero-build-cdn
 
 A *zero-build-step* React project implemented with Babel's in-browser compiler `@babel/standalone`. This is React *the CDN way*.
 
@@ -39,7 +39,7 @@ General clean-ups, todos and things I wish to implement for this project:
 * [x] DONE Deal with React 19's discontinuation of a UMD distribution: <https://react.dev/blog/2024/04/25/react-19-upgrade-guide#umd-builds-removed>
   The solution uses ESM bundles from esm.sh with import maps, combined with Babel standalone's `data-type="module"` attribute.
 * [x] DONE Upgrade Babel.
-* [ ] Rename to "zero-build-cdn" because now it's Babel, and esm.sh, not just Babel. Plus this is a catchier name.
+* [x] DONE Rename to "zero-build-cdn" because now it's Babel, and esm.sh, not just Babel. Plus this is a catchier name.
 * [ ] SRI (subresource integrity) on the esm modules.
 
 

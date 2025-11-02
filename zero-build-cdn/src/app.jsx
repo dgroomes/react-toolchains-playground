@@ -10,7 +10,7 @@ class App extends React.PureComponent {
     render() {
         return (
             <>
-                <h1>react-playground/babel-standalone</h1>
+                <h1>react-playground/zero-build-cdn</h1>
                 <p>Hello from JSX dynamically compiled by Babel in the browser! The current time
                     is {new Date().toLocaleTimeString()}.</p>
             </>

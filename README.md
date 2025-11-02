@@ -23,11 +23,11 @@ re-using the code.
 The subprojects include:
 
 
-## `babel-standalone/`
+## `zero-build-cdn/`
 
 A *zero-build-step* React project implemented with Babel's in-browser compiler `@babel/standalone`. This is React *the CDN way*.
 
-See the README in [babel-standalone/](babel-standalone/).
+See the README in [zero-build-cdn/](zero-build-cdn/).
 
 
 ## `vite/`
