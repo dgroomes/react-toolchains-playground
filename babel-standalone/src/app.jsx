@@ -1,4 +1,5 @@
-'use strict';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
 class App extends React.PureComponent {
 
@@ -18,4 +19,4 @@ class App extends React.PureComponent {
 }
 
 const root = document.getElementById("root");
-ReactDOM.createRoot(root).render(<App/>);
+createRoot(root).render(<App/>);

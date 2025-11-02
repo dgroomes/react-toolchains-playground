@@ -5,8 +5,8 @@ A *zero-build-step* React project implemented with Babel's in-browser compiler `
 
 ## Overview
 
-React and Babel are loaded as script tags from a CDN (<https://unpkg.com/>). Babel transpiles the ESNext source code
-on-the-fly in the browser.
+React and Babel are loaded from CDNs. React is loaded from <https://esm.sh> using import maps, while Babel is loaded from
+<https://unpkg.com/> as a script tag. Babel transpiles the JSX source code on-the-fly in the browser.
 
 This project was originally scaffolded using the example project in the *old docs* incarnation of <https://reactjs.org/docs/add-react-to-a-website.html>.
 Unfortunately, the *new docs* (which is what the link will bring you to today) do not offer any information about using
@@ -36,7 +36,11 @@ General clean-ups, todos and things I wish to implement for this project:
   functionality, but I had already ported it to a standalone project: <https://github.com/dgroomes/github-pages-dynamic-viewer>
   and I did this because I want to focus specifically on "React/JSX the CDN way" which is already enough to demo in a
   single subproject.
-* [ ] Deal with React 19's discontinuation of a UMD distribution: <https://react.dev/blog/2024/04/25/react-19-upgrade-guide#umd-builds-removed>
+* [x] DONE Deal with React 19's discontinuation of a UMD distribution: <https://react.dev/blog/2024/04/25/react-19-upgrade-guide#umd-builds-removed>
+  The solution uses ESM bundles from esm.sh with import maps, combined with Babel standalone's `data-type="module"` attribute.
+* [ ] Upgrade Babel.
+* [ ] Rename to "zero-build-cdn" because now it's Babel, and esm.sh, not just Babel. Plus this is a catchier name.
+* [ ] SRI (subresource integrity) on the esm modules.
 
 
 ## Reference
