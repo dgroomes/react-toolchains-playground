@@ -1,4 +1,5 @@
-'use strict';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
 class App extends React.PureComponent {
 
@@ -10,7 +11,7 @@ class App extends React.PureComponent {
         return (
             <>
                 <h1>react-playground/babel-standalone</h1>
-                <p>Hello from JSX dynamically compiled by Babel in the browser! The current time
+                <p>Hello from JSX dynamically compiled by Babel in the browser with React 19! The current time
                     is {new Date().toLocaleTimeString()}.</p>
             </>
         );
@@ -18,4 +19,4 @@ class App extends React.PureComponent {
 }
 
 const root = document.getElementById("root");
-ReactDOM.createRoot(root).render(<App/>);
+createRoot(root).render(<App/>);

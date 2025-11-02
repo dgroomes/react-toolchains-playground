@@ -5,8 +5,13 @@ A *zero-build-step* React project implemented with Babel's in-browser compiler `
 
 ## Overview
 
-React and Babel are loaded as script tags from a CDN (<https://unpkg.com/>). Babel transpiles the ESNext source code
-on-the-fly in the browser.
+React 19 is loaded as ESM modules from esm.sh CDN using import maps, while Babel is loaded from unpkg. Babel transpiles
+the JSX source code on-the-fly in the browser.
+
+**Key Technologies:**
+- **React 19**: Loaded as ESM modules from esm.sh (UMD builds were discontinued in React 19)
+- **Import Maps**: Used to map bare module specifiers like "react" to esm.sh URLs
+- **Babel Standalone**: Transpiles JSX to JavaScript in the browser with `data-type="module"` to preserve ES module syntax
 
 This project was originally scaffolded using the example project in the *old docs* incarnation of <https://reactjs.org/docs/add-react-to-a-website.html>.
 Unfortunately, the *new docs* (which is what the link will bring you to today) do not offer any information about using
@@ -36,7 +41,8 @@ General clean-ups, todos and things I wish to implement for this project:
   functionality, but I had already ported it to a standalone project: <https://github.com/dgroomes/github-pages-dynamic-viewer>
   and I did this because I want to focus specifically on "React/JSX the CDN way" which is already enough to demo in a
   single subproject.
-* [ ] Deal with React 19's discontinuation of a UMD distribution: <https://react.dev/blog/2024/04/25/react-19-upgrade-guide#umd-builds-removed>
+* [x] DONE Deal with React 19's discontinuation of a UMD distribution: <https://react.dev/blog/2024/04/25/react-19-upgrade-guide#umd-builds-removed>
+  The solution uses ESM bundles from esm.sh with import maps, combined with Babel standalone's `data-type="module"` attribute.
 
 
 ## Reference
