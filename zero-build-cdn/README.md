@@ -5,7 +5,7 @@ A *zero-build-step* React project implemented with Babel's in-browser compiler `
 
 ## Overview
 
-React and Babel are loaded from CDNs. React is loaded from <https://esm.sh> using import maps, while Babel is loaded from
+React and Babel are loaded from CDNs. React is loaded from <https://jspm.io> using import maps, while Babel is loaded from
 <https://unpkg.com/> as a script tag. Babel transpiles the JSX source code on-the-fly in the browser.
 
 This project was originally scaffolded using the example project in the *old docs* incarnation of <https://reactjs.org/docs/add-react-to-a-website.html>.
@@ -40,10 +40,17 @@ General clean-ups, todos and things I wish to implement for this project:
   The solution uses ESM bundles from esm.sh with import maps, combined with Babel standalone's `data-type="module"` attribute.
 * [x] DONE Upgrade Babel.
 * [x] DONE Rename to "zero-build-cdn" because now it's Babel, and esm.sh, not just Babel. Plus this is a catchier name.
-* [ ] SRI (subresource integrity) on the esm modules.
+* [x] DONE SRI (subresource integrity) on the esm modules.
+   * <https://shopify.engineering/shipping-support-for-module-script-integrity-in-chrome-safari> Not sure why I can't find the official docs on this in Chrome's docs. 
+   * This is very advanced. There is support for SRI for modules, but for many reasons it's complicated. For one, it
+     seems like to actually enforce that all content is "verified" (or whatever), you need to set a content security policy
+     for `require-sri-for` via HTTP headers (NOT meta tags). I'm not going to extend this subproject to doing that.
+     That's too far from the purpose. But I did at least do SRI for the known scripts in the module graph, computed by
+     the JSPM tool (very neat). 
+* [ ] Can/should we use Babel via ESM?
 
 
 ## Reference
 
-* React <https://reactjs.org/> *A JavaScript library for building user interfaces*
+* React <https://react.dev/> *A JavaScript library for building user interfaces*
 * Babel <https://babeljs.io/> *The compiler for next generation JavaScript*
