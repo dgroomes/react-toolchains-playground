@@ -15,16 +15,19 @@
 
     React: https://github.com/facebook/react/blob/main/CHANGELOG.md
     Babel: https://github.com/babel/babel/releases
-
-    React 19 no longer provides UMD builds, so we use ESM bundles from esm.sh via import maps.
     -->
 
-    <!-- Import maps allow us to map bare module specifiers like "react" to esm.sh URLs -->
+    <!--
+    With the release of React 19, React no longer provides UMD builds, so we use ESM bundles from esm.sh via import maps.
+    Import maps allow us to map bare module specifiers like "react" to esm.sh URLs.
+
+    It's not clear if we can get SRI (subresource integrity) with this route. Conflicting information: https://esm.sh/#faq and https://stackoverflow.com/a/59853202
+    -->
     <script type="importmap">
       {
         "imports": {
-          "react": "https://esm.sh/react@19.0.0?dev",
-          "react-dom/client": "https://esm.sh/react-dom@19.0.0/client?dev"
+          "react": "https://esm.sh/react@19.2.0",
+          "react-dom/client": "https://esm.sh/react-dom@19.2.0/client"
         }
       }
     </script>
