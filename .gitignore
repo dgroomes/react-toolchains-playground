@@ -2,3 +2,31 @@
 .DS_Store
 node_modules/
 dist/
+
+# While a lock file is a must for a "real" application, the 1,000+ lines of code file and the 1,000+ LOC sized diffs for
+# dependency updates detracts from the demo/focus. Let's gitignore it.
+#
+# I would be ok with a lock file for the true runtime dependencies, but the dev-time dependencies with native binaries,
+# like esbuild, bring in a combinatorial explosion of entries, for each combination of OS and CPU:
+#
+#   - @esbuild/aix-ppc64
+#   - @esbuild/android-arm64
+#   - @esbuild/android-x64
+#   - @esbuild/darwin-arm64
+#   - @esbuild/darwin-x64
+#   - @esbuild/freebsd-arm64
+#   - @esbuild/freebsd-x64
+#   - @esbuild/linux-arm64
+#   - @esbuild/linux-x64
+#   - @esbuild/netbsd-arm64
+#   - @esbuild/netbsd-x64
+#   - @esbuild/openbsd-arm64
+#   - @esbuild/openbsd-x64
+#   - @esbuild/openharmony-arm64
+#   - @esbuild/sunos-x64
+#   - @esbuild/win32-arm64
+#   - @esbuild/win32-x64
+#
+# This noise isn't quite to the level of "security theater", but it's a similar complaint.
+#
+package-lock.json

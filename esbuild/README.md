@@ -26,34 +26,36 @@ Remember, this is a "bare-bones" setup. If I was going to build a larger project
 
 Follow these instructions to build and serve the program:
 
-1. Install the dependencies
-    * ```shell
+1. Pre-requisite: Node.js
+    - I used version 26.13.0 (LTS)
+2. Install the dependencies
+    - ```shell
       npm install
       ```
-2. Serve the content (and build continuously)
-    * ```shell
+3. Serve the content (and build continuously)
+    - ```shell
       node serve.mjs
       ```
-3. Open the browser
-    * Open <http://[::1]:8080>
-    * Verify the UI and iterate!
+4. Open the browser
+    - Open <http://[::1]:8080>
+    - Verify the UI and iterate!
 
 
 ## Wish List
 
 General clean-ups, todos and things I wish to implement for this project:
 
-* [x] DONE Add a component library to make the example more interesting and really exercise the bundler and showcase the experience.
+- [x] DONE Add a component library to make the example more interesting and really exercise the bundler and showcase the experience.
   I think I'll add Ant Design, I like look of it, and it's extremely popular (by stars at least).
-* [x] DONE Consider figuring out source maps
-* [x] DONE Show how to bundle CSS. While I don't really need this in this project because Ant Design uses CSS-in-JS, it is a
+- [x] DONE Consider figuring out source maps
+- [x] DONE Show how to bundle CSS. While I don't really need this in this project because Ant Design uses CSS-in-JS, it is a
   common use case and I want to figure out how to do it idiomatically in esbuild.
 
 
 ## Reference
 
-* [esbuild: "Getting Started"](https://esbuild.github.io/getting-started/)
-    * I followed esbuild's guide to get started on this project. The esbuild docs are awesome!
-* [esbuild API reference: `Server`](https://esbuild.github.io/api/#serve)
-    * > Serve your code with a web server that rebuilds on every request
-    * This development workflow is interesting. 
+- [esbuild: "Getting Started"](https://esbuild.github.io/getting-started/)
+    - I followed esbuild's guide to get started on this project. The esbuild docs are awesome!
+- [esbuild API reference: `Server`](https://esbuild.github.io/api/#serve)
+    - > Serve your code with a web server that rebuilds on every request
+    - This development workflow is interesting.
