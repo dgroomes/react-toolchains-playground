@@ -37,13 +37,6 @@ A React project built with [Vite](https://vitejs.dev/). It features TypeScript.
 See the README in [vite/](vite/).
 
 
-## `webpack/`
-
-A React project built with [webpack](https://webpack.js.org/). It features TypeScript and `ts-loader`.
-
-See the README in [webpack/](webpack/).
-
-
 ## `esbuild/`
 
 A bare-bones React and TypeScript project built with [esbuild](https://esbuild.github.io/).
