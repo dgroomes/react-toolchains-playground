@@ -34,26 +34,29 @@
     <script type="importmap">
         {
           "imports": {
-            "react": "https://ga.jspm.io/npm:react@19.2.0/dev.index.js",
-            "react-dom/client": "https://ga.jspm.io/npm:react-dom@19.2.0/dev.client.js"
+            "react": "https://ga.jspm.io/npm:react@19.3.1/dev.index.js",
+            "react/jsx-runtime": "https://ga.jspm.io/npm:react@19.3.1/dev.jsx-runtime.js",
+            "react-dom/client": "https://ga.jspm.io/npm:react-dom@19.3.1/dev.client.js"
           },
           "scopes": {
             "https://ga.jspm.io/": {
-              "react-dom": "https://ga.jspm.io/npm:react-dom@19.2.0/dev.index.js",
-              "scheduler": "https://ga.jspm.io/npm:scheduler@0.27.0/dev.index.js"
+              "react-dom": "https://ga.jspm.io/npm:react-dom@19.3.1/dev.index.js",
+              "scheduler": "https://ga.jspm.io/npm:scheduler@0.28.0/dev.index.js"
             }
           },
           "integrity": {
-            "https://ga.jspm.io/npm:react-dom@19.2.0/dev.client.js": "sha384-tg+vYgm/cY4QEcS+l4oUDbrRt4az21fQbmlxvjJNPrn2nBny6UY8Y9n+2mqX0A2Y",
-            "https://ga.jspm.io/npm:react-dom@19.2.0/dev.index.js": "sha384-T/8aohUKUvHMS8Do1pkK1DdR49yku0KyhOKjCwPz1w5rL6UaUByIp1aUxNdMYd45",
-            "https://ga.jspm.io/npm:react@19.2.0/dev.index.js": "sha384-ZspP2w8etXGTYRo5tAxd7ROWMexFHeEMrCjDec3f73UwtbBQe8CobBtcfE7R1yD5",
-            "https://ga.jspm.io/npm:scheduler@0.27.0/dev.index.js": "sha384-oKJtsW3Vyv7XZg7EllfIBsJ94VlQvZ7xgprlmt6tvCF7L28/dUynpBwlXsri8aDc"
+            "https://ga.jspm.io/npm:react-dom@19.3.1/dev.client.js": "sha384-2g20rJom3iQq788TV2+BhorT1oWjaKd32dU3SNE19ArSGkG4Sun7GSTRU/hWZNvd",
+            "https://ga.jspm.io/npm:react-dom@19.3.1/dev.index.js": "sha384-kZ2tcGLJCnMmbn5kxD2wkkNToMfwke4qd60JerQw7r1r/c4S87gF5rOstSaKv8G6",
+            "https://ga.jspm.io/npm:react@19.3.1/dev.index.js": "sha384-zo1oy0HRYmxW1CGODLGm34i2xLTX9mTpg6tnEhbhc0Q5HtwzoiEnEV+8DPPI8w0L",
+            "https://ga.jspm.io/npm:react@19.3.1/dev.jsx-runtime.js": "sha384-gHI9/RlP30E0E5gCZnE7SyU8S5YfOdAH8V92MB5dJuhi//HEerR5WgnclsZYwwiU",
+            "https://ga.jspm.io/npm:scheduler@0.28.0/dev.index.js": "sha384-BQ0LXIU8JF1chzCfr1uikxldUCfo1MyhZcahIOAJoynHELDXjqsMkx8dQL6Ys5ti",
+            "https://ga.jspm.io/npm:scheduler@0.28.0/cjs/dev.scheduler.development.js": "sha384-wDJ8Z+Oiw0rw7mlPdlxQge6D0Kni9cXOWBX8rERd1yGW4D1itmamTiv2nXvHRdF8"
           }
         }
     </script>
 
     <!-- Load Babel standalone for JSX transpilation -->
-    <script src="https://unpkg.com/@babel/standalone@7.28.5/babel.min.js" integrity="sha384-mP9sW+eK08VvAmlxEkn9Kn6egvKFtnFEfW7/u9feUWAIoTvnYAzT4NwsskP+uWUd" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@babel/standalone@8.0.10/babel.min.js" integrity="sha384-SORwUU5pPZ0MCgqMVrIJa2bGnfT9T4sSWOkAYNFz01Hm9hL/VYsE+Jvms5dhp6mA" crossorigin="anonymous"></script>
 
     <!-- Use Babel to *load* (and transpile) JSX source code. We are using in-browser JSX (no build step)! This works
      because we have loaded the "babel/standalone" library and have specified the source type of "text/babel" in the
@@ -64,6 +67,6 @@
      The data-type="module" attribute tells Babel to preserve ES module syntax (import/export) instead of converting
      to CommonJS require statements.
     -->
-    <script type="text/babel" data-type="module" src="app.jsx"></script>
+    <script type="text/babel" data-type="module" data-presets="react" src="app.jsx"></script>
   </body>
 </html>
